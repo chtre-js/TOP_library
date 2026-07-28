@@ -6,7 +6,7 @@ function Book(id, title, author, pages, readStatus) {
     this.author = author;
     this.pages = pages;
     this.readStatus = readStatus;
-};
+}
 
 function addBook(title, author, pages, readStatus) {
     const id = crypto.randomUUID();

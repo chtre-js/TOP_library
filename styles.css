@@ -72,3 +72,40 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+@property --color__primary {
+    syntax: "<color>";
+    inherits: false;
+}
+
+@property --color__alert-red {
+    syntax: "<color>";
+    inherits: false;
+}
+
+@property --color__main-background {
+    syntax: "<color>";
+    inherits: false;
+}
+
+@property --color__secondary-background {
+    syntax: "<color>";
+    inherits: false;
+}
+
+@property --color__light-gray {
+    syntax: "<color>";
+    inherits: false;
+}
+
+:root {
+    --color__primary: #4A5D4E;
+    --color__alert-red: #C0392B;
+    --color__main-background: #EBF2F4;
+    --color__secondary-background: #E8E4E1;
+    --color__light-gray: #C1C8CA;
+}
+
+body {
+    background-color: var(--color__main-background);
+}
