@@ -150,6 +150,11 @@ body {
     border-radius: var(--border-radius);
     padding-inline: 1rem;
     padding-block: .4rem;
+    cursor: pointer;
+}
+
+.header__cta:hover {
+    background-color: #415145;
 }
 
 .grid {
@@ -205,4 +210,38 @@ body {
     padding: .4rem;
     border-radius: var(--border-radius);
     font-size: .8rem;
+}
+
+.book__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book__pages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .2rem;
+}
+
+.book__pages > img {
+    aspect-ratio: 1/1;
+    width: 1.4rem;
+}
+
+.book__remove-btn {
+    border: none;
+    background-color: transparent;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+    width: 2rem;
+    background-image: url(./assets/icons/delete.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.book__remove-btn:hover {
+    background-color: var(--color__light-gray);
 }
