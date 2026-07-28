@@ -83,6 +83,11 @@ select {
   inherits: false;
 }
 
+@property --color__dark-red {
+    syntax: "<color>";
+    inherits: false;
+}
+
 @property --color__main-background {
   syntax: "<color>";
   inherits: false;
@@ -107,9 +112,11 @@ select {
   --color__primary: #4a5d4e;
   --color__alert-red: #c0392b;
   --color__main-background: #ebf2f4;
-  --color__secondary-background: #e8e4e1;
+  --color__secondary-background: white;
   --color__light-gray: #c1c8ca;
   --padding__main-gutter-inline: 2rem;
+  --border-radius: .2rem;
+  --color__dark-red: #430001;
 }
 
 body {
@@ -140,16 +147,62 @@ body {
     border: none;
     background-color: var(--color__primary);
     color: white;
-    border-radius: .4rem;
+    border-radius: var(--border-radius);
     padding-inline: 1rem;
     padding-block: .4rem;
 }
 
 .grid {
-    max-width: 85rem;
+    max-width: 80rem;
     margin-top: 2rem;
     margin-inline: auto;
     display: grid;
     grid-template: 1fr / 1fr;
     grid-auto-flow: column;
+}
+
+.grid__card {
+    border-radius: var(--border-radius);
+    padding: .5rem;
+    background-color: var(--color__secondary-background);
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: .5rem;
+}
+
+.grid__card > img {
+    border-radius: var(--border-radius);
+    width: 200px;
+    height: 300px;
+}
+
+.card__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.book__title {
+    color: black;
+    font-weight: bold;
+}
+
+.book__author {
+    text-decoration: underline;
+}
+
+.card__readStatus {
+    align-self: center;
+    margin-inline: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color__alert-red);
+    color: var(--color__dark-red);
+    width: fit-content;
+    padding: .4rem;
+    border-radius: var(--border-radius);
+    font-size: .8rem;
 }
