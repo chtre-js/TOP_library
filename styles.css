@@ -116,7 +116,9 @@ body {
   background-color: var(--color__main-background);
   padding-inline: var(--padding__main-gutter-inline);
   min-height: 100vh;
+  font-family: "Google Sans", Arial, Helvetica, sans-serif;
 }
+
 
 .top-bar {
   display: flex;
@@ -125,4 +127,29 @@ body {
   max-width: 80rem;
   margin: auto;
   padding: 1rem 0;
+}
+
+.logo {
+    font-family: "Playfair Display", 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    color: var(--color__primary);
+    font-weight: 500;
+}
+
+.header__cta {
+    border: none;
+    background-color: var(--color__primary);
+    color: white;
+    border-radius: .4rem;
+    padding-inline: 1rem;
+    padding-block: .4rem;
+}
+
+.grid {
+    max-width: 85rem;
+    margin-top: 2rem;
+    margin-inline: auto;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-auto-flow: column;
 }
