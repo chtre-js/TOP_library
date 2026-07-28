@@ -20,8 +20,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -60,9 +60,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -74,38 +74,55 @@ select {
 }
 
 @property --color__primary {
-    syntax: "<color>";
-    inherits: false;
+  syntax: "<color>";
+  inherits: false;
 }
 
 @property --color__alert-red {
-    syntax: "<color>";
-    inherits: false;
+  syntax: "<color>";
+  inherits: false;
 }
 
 @property --color__main-background {
-    syntax: "<color>";
-    inherits: false;
+  syntax: "<color>";
+  inherits: false;
 }
 
 @property --color__secondary-background {
-    syntax: "<color>";
-    inherits: false;
+  syntax: "<color>";
+  inherits: false;
 }
 
 @property --color__light-gray {
-    syntax: "<color>";
-    inherits: false;
+  syntax: "<color>";
+  inherits: false;
+}
+
+@property --padding__main-gutter-inline {
+  syntax: "<length>";
+  inherits: false;
 }
 
 :root {
-    --color__primary: #4A5D4E;
-    --color__alert-red: #C0392B;
-    --color__main-background: #EBF2F4;
-    --color__secondary-background: #E8E4E1;
-    --color__light-gray: #C1C8CA;
+  --color__primary: #4a5d4e;
+  --color__alert-red: #c0392b;
+  --color__main-background: #ebf2f4;
+  --color__secondary-background: #e8e4e1;
+  --color__light-gray: #c1c8ca;
+  --padding__main-gutter-inline: 2rem;
 }
 
 body {
-    background-color: var(--color__main-background);
+  background-color: var(--color__main-background);
+  padding-inline: var(--padding__main-gutter-inline);
+  min-height: 100vh;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80rem;
+  margin: auto;
+  padding: 1rem 0;
 }
