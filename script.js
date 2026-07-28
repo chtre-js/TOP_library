@@ -14,3 +14,7 @@ function addBook(title, author, pages, readStatus) {
 
     myLibrary.push(newBook);
 }
+
+function getUserInput { // TODO
+
+}
