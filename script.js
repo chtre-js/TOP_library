@@ -35,10 +35,18 @@ function displayBook(book) {
     readStatus.textContent = "Unread";
   }
 
+  const removeBtn = cardClone.querySelector(".card__remove-btn");
+  removeBtn.addEventListener("click", () => {
+    const index = myLibrary.findIndex((b) => b.id === book.id);
+    if (index !== -1) {
+      myLibrary.splice(index, 1);
+    }
+    card.remove();
+  });
+
   card.appendChild(cardClone);
   const grid = document.querySelector(".grid");
   grid.appendChild(card);
-}
 
 function getUserInput() {
   const title = document.getElementById("title").value;
@@ -93,10 +101,6 @@ function initializeDialog() {
     form.reset();
     dialog.close();
   });
-}
-
-function deleteBook() {
-    const delete
 }
 
 
