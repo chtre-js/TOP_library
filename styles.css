@@ -264,6 +264,7 @@ dialog {
   border: none;
   border-top: 3px solid var(--color__primary);
   border-radius: var(--border-radius);
+  z-index: 1000;
 }
 
 .form__wrap {
