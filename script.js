@@ -56,8 +56,8 @@ function displayBook(book) {
   });
 
   card.appendChild(cardClone);
-  const grid = document.querySelector(".grid");
-  grid.appendChild(card);
+  const cardsContainer = document.querySelector(".cards__container");
+  cardsContainer.appendChild(card);
 }
 
 function getUserInput() {

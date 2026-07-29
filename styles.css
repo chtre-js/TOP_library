@@ -126,6 +126,7 @@ body {
   padding-inline: var(--padding__main-gutter-inline);
   min-height: 100vh;
   font-family: "Google Sans", Arial, Helvetica, sans-serif;
+  margin-bottom: 2rem;
 }
 
 
@@ -160,14 +161,14 @@ body {
     background-color: #415145;
 }
 
-.grid {
+.cards__container {
     max-width: 80rem;
     margin-top: 2rem;
     margin-inline: auto;
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: max-content;
-    gap: 1.5rem;
+    display: flex;
+    flex-flow: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
 }
 
 .card {
