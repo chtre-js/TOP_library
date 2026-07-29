@@ -13,6 +13,7 @@ function addBook(title, author, pages, readStatus) {
     const newBook = new Book(id, title, author, pages, readStatus);
 
     myLibrary.push(newBook);
+    displayBook(newBook);
 }
 
 function displayBook(book) {

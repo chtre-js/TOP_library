@@ -255,3 +255,37 @@ body {
 .card__remove-btn:hover {
     background-color: var(--color__light-gray);
 }
+
+dialog {
+  height: 30rem;
+  margin: auto;
+  border: none;
+  border-top: 3px solid var(--color__primary);
+  border-radius: var(--border-radius);
+}
+
+.form__wrap {
+  height: 100%;
+}
+
+.form__wrap > form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inputs__wrap {
+  flex: 1;
+  justify-content: space-between;
+}
+
+.inputs__wrap > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs__wrap > .checkbox__container {
+  display: flex;
+  flex-direction: row;
+}

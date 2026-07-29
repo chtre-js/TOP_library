@@ -23,6 +23,30 @@
           <button class="header__cta">+ Add New Book</button>
         </div>
       </div>
+      <dialog id="form" open="open">
+        <div class="form__wrap">
+          <form>
+            <div class="inputs__wrap">
+              <div>
+                <label for="title">Title</label>
+                <input name="title" type="text" />
+              </div>
+              <div>
+                <label for="author">Author</label>
+                <input name="author" type="text" />
+              </div>
+              <div>
+                <label for="pages">Pages</label>
+                <input name="pages" type="number" />
+              </div>
+              <div class="checkbox__container">
+                <label for="readStatus">Have you read it ?</label>
+                <input name="readStatus" type="checkbox" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </dialog>
     </header>
     <div class="grid">
       <template id="cardTemplate">
