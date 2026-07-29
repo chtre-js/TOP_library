@@ -153,6 +153,7 @@ body {
     padding-inline: 1rem;
     padding-block: .4rem;
     cursor: pointer;
+    width: 100%;
 }
 
 .header__cta:hover {
@@ -257,7 +258,8 @@ body {
 }
 
 dialog {
-  height: 30rem;
+  height: 20rem;
+  width: 20rem;
   margin: auto;
   border: none;
   border-top: 3px solid var(--color__primary);
@@ -288,4 +290,8 @@ dialog {
 .inputs__wrap > .checkbox__container {
   display: flex;
   flex-direction: row;
+}
+
+.form-btn__wrap {
+  width: 100%;
 }
