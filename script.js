@@ -28,8 +28,19 @@ function displayBook(book) {
     book.pages;
 
   const readStatus = cardClone.querySelector(".card__readStatus");
+  card.addEventListener("click", (event) => {
+    readStatus.classList.toggle("true");
+    if (book.readStatus) {
+      book.readStatus = false;
+      readStatus.textContent = "Unread";
+    } else {
+      book.readStatus = true;
+      readStatus.textContent = "Read";
+    }
+  });
+
   if (book.readStatus) {
-    readStatus.classList.add("true");
+    readStatus.classList.toggle("true");
     readStatus.textContent = "Read";
   } else {
     readStatus.textContent = "Unread";
@@ -43,7 +54,6 @@ function displayBook(book) {
     }
     card.remove();
   });
-
 
   card.appendChild(cardClone);
   const grid = document.querySelector(".grid");
@@ -104,9 +114,5 @@ function initializeDialog() {
     dialog.close();
   });
 }
-
-
-
-
 
 initializeDialog();
