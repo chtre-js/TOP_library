@@ -44,9 +44,11 @@ function displayBook(book) {
     card.remove();
   });
 
+
   card.appendChild(cardClone);
   const grid = document.querySelector(".grid");
   grid.appendChild(card);
+}
 
 function getUserInput() {
   const title = document.getElementById("title").value;
