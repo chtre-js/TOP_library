@@ -1,6 +1,4 @@
 class Book {
-  #myLibrary = [];
-  
   constructor(title, author, pages, readStatus) {
     this.id = crypto.randomUUID();
     this.title = title;
@@ -9,7 +7,7 @@ class Book {
     this.readStatus = readStatus;
   }
 
-  #displayBook(book) {
+  displayBook(book) {
     const cardTemplate = document.querySelector("#cardTemplate");
     const cardClone = cardTemplate.content.cloneNode(true);
     const card = document.createElement("div");
@@ -41,21 +39,12 @@ class Book {
 
     const removeBtn = cardClone.querySelector(".card__remove-btn");
     removeBtn.addEventListener("click", () => {
-      const index = this.#myLibrary.findIndex((b) => b.id === book.id);
-      if (index !== -1) {
-        this.#myLibrary.splice(index, 1);
-      }
       card.remove();
     });
 
     card.appendChild(cardClone);
     const cardsContainer = document.querySelector(".cards__container");
     cardsContainer.appendChild(card);
-  }
-
-  addBook(book) {
-    this.#myLibrary.push(book);
-    this.#displayBook(book);
   }
 }
 
@@ -70,7 +59,7 @@ function getUserInput() {
   return [title, author, pages, readStatus];
 }
 
-function initializeDialog() {
+const initializeDialog = (() => {
   const dialog = document.getElementById("form");
   const openDialogBtn = document.querySelector(".top-bar .header__cta");
   const form = document.querySelector("dialog form");
@@ -110,10 +99,8 @@ function initializeDialog() {
       return;
     }
     const newBook = new Book(title, author, pages, readStatus)
-    newBook.addBook(newBook);
+    newBook.displayBook(newBook);
     form.reset();
     dialog.close();
   });
-}
-
-initializeDialog();
+})();
